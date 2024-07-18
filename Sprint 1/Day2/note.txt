@@ -1,2 +1,0 @@
-this is day2 of react journey
-
