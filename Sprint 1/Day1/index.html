@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="root"></div>
+
+</body>
+</html>
+<script>
+
+    function Button(text) {
+        let btn = document.createElement("button")
+        btn.innerText = text
+        return btn
+    }
+    function Text(text) {
+        let para = document.createElement("p")
+        para.innerText = text
+        return para
+    }
+    let box = document.createElement("div")
+    let incBtn = Button("+")
+    let decBtn = Button("-")
+    let countTrack = Text(0)
+    box.append(incBtn, decBtn, countTrack)
+    let root = document.getElementById("root")
+    root.append(box)
+</script>
