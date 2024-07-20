@@ -1,0 +1,43 @@
+.User{
+    border: 2px solid teal;
+    padding: 10px;
+    margin: 10px;
+}
+.heading{
+    color: teal;
+}
+
+.UserCard{
+    justify-content: center;
+    border: 1px solid black;
+    margin: 20px;
+    display: flex;
+}
+.image{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 20px;
+}
+.divv{
+    display: flex;
+    gap: 20px;
+}
+
+.head{
+    display: flex;
+}
+
+
+.div3{
+    display: flex;            /* Enable Flexbox */
+    align-items: center;      /* Center vertically */
+    justify-content: center;  /* Center horizontally */
+    padding: 16px;  
+    width: 10%;  
+}
+.div3>button{
+    padding: 5px  15px 5px 15px;
+    border-radius: 7px;
+    
+}
