@@ -21,12 +21,10 @@ function App() {
   return (
     <div className="App">
       <AddTodo handleTodoAdd={handleTodoAdd} />
-
       {todos.map((ele) => (
         <TodoItem key={ele.id} {...ele} />
       ))}
     </div>
   );
 }
-
 export default App;

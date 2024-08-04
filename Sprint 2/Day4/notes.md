@@ -1,0 +1,1 @@
+In this we discuss about react component hierarchy

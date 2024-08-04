@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+}
+
+.counte {
+  border: 1px solid black;
+  margin: 1%;
+  padding: 15px;
+}
+.counte > button {
+  background-color: black;
+  color: aliceblue;
+  padding: 5px;
+  margin: 5px;
+}
+
+.todoo {
+  border: 1px solid black;
+  margin: 1%;
+  padding: 20px;
+  
+}
+.todoo > input {
+  padding: 7px;
+  margin: 5px;
+}
+.todoo > button {
+  background-color: black;
+  color: aliceblue;
+  border-radius: 5px;
+  padding: 7px;
+}
