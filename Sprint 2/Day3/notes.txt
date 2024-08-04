@@ -1,0 +1,9 @@
+it is react hook which is used to manage the state of particular component.
+
+features/limitation
+1. setState is kind of async
+2. setState batches updates
+3. setState can take updater functions, which will use the value from the react store internally ( will explain with a state diagram )
+4. setState is kind of async
+5. setState batches updates
+6. setState can take updater functions, which will use the value from the react store internally
