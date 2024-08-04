@@ -1,23 +1,60 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { useState } from 'react';
+import TodoItem from './components/TodoItem';
+import NoTodos from './components/NoTodo';
+import AddTodo from './components/AddTodos';
 function App() {
+  let [todos, setTodos] = useState([])
+
+  let handleTodoAdd = (inputValue) => {
+    let newTodo = {
+      id: Math.random() * Date.now(),
+      title: inputValue,
+      status: false
+    }
+    let updateTodos = [...todos, newTodo]
+    setTodos(updateTodos)
+  }
+
+  let handleTodoUpdate=(id)=>{
+    let updatedTodos = todos.map((ele) => {
+      return ele.id == id
+        ? {
+          ...ele,
+          status: !ele.status,
+        }
+        : ele;
+    });
+    setTodos(updatedTodos);
+  };
+
+  let handleTodoDelete =(id)=>{
+    let updatedTodos = todos.filter((ele) => {
+      return ele.id != id;
+    });
+    setTodos(updatedTodos);
+  }
+ 
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AddTodo handleTodoAdd={handleTodoAdd} />
+      {todos.length > 0 ?
+        (todos.map((ele) => (
+          <TodoItem
+            key={ele.id}
+            title={ele.title}
+            status={ele.status}
+            id={ele.id}
+            handleTodoUpdate={handleTodoUpdate}
+            handleTodoDelete={handleTodoDelete}
+          />
+        ))
+        ) : (
+          <NoTodos />
+        )}
+
+
     </div>
   );
 }
